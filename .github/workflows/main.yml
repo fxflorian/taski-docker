@@ -9,7 +9,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     # Блок services аналогичен docker-compose.yml
-
   build_and_push_to_docker_hub:
       name: Push Docker image to DockerHub
       runs-on: ubuntu-latest
@@ -45,10 +44,6 @@ jobs:
             # устанавливаем тег latest, чтобы потом
             # на сервере и в docker-compose.yml не указывать версию
             tags: fxflorian/taski_backend:latest 
-
-
-
-
     services:
       postgres:
         image: postgres:13.10
