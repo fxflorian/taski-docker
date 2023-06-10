@@ -17,6 +17,9 @@ services:
     env_file: .env
     volumes:
       - static_volume:/backend_static
+    depends_on:
+      - db
+
   frontend:
     image: fxflorian/taski_frontend  # Качаем с DockerHub
     env_file: .env
